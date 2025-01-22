@@ -58,6 +58,7 @@ gem "sidekiq"      # Processamento de jobs assíncronos
 
 gem "hotwire-rails"# Atualizações em tempo real
 
+gem "webpacker"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem

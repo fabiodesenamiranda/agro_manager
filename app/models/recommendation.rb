@@ -4,4 +4,5 @@ class Recommendation < ApplicationRecord
   belongs_to :service
   belongs_to :client
   belongs_to :visit
+  belongs_to :product
 end

@@ -6,6 +6,18 @@ class SchedulesController < ApplicationController
   # GET /schedules or /schedules.json
   def index
     @schedules = Schedule.all
+
+    respond_to do |format|
+      format.html # Renderiza a view normalmente.
+      format.json { render(json: @schedules.map { |schedule|
+        {
+          id: schedule.id,
+          title: schedule.title,
+          start: schedule.start_time,
+          end: schedule.end_time,
+        }
+      })}
+    end
   end
 
   # GET /schedules/1 or /schedules/1.json

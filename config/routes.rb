@@ -1,6 +1,10 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  resources :pragues
+  resources :diseases
+  resources :cultures
+  resources :products
   devise_for :users
   resources :users
   resources :services

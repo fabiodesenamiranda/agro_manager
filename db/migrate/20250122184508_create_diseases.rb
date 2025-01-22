@@ -1,0 +1,12 @@
+# frozen_string_literal: true
+
+class CreateDiseases < ActiveRecord::Migration[8.0]
+  def change
+    create_table(:diseases) do |t|
+      t.string(:name)
+      t.text(:description)
+
+      t.timestamps
+    end
+  end
+end
